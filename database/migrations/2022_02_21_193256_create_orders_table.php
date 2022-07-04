@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->nullable()->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId('legal_id')->nullable()->constrained()->onDelete('cascade')->onUpdate('cascade');
-            // $table->foreignId('article_id');
             $table->string('army_no')->nullable();
 
             $table->timestamp('order_date');

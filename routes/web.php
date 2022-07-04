@@ -38,12 +38,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-// Route::get('/', function () {
-//     return view('components.articles', [
-//         'articles' => Articles::all()
-//     ]);
-// });
-
 // ================================================================================
 Auth::routes();
 
@@ -84,9 +78,6 @@ Route::prefix('user')->name('user.')->group(function () {
 
         Route::post('/delete', [UserController::class, 'delete'])->name('delete');
         Route::post('/logout', [UserController::class, 'logout'])->name('logout');
-
-
-        // Route::get('/send-email', [MailController::class, 'sendEmail']);
     });
 });
 // ================================================================================
